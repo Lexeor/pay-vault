@@ -1,9 +1,13 @@
-import React from "react";
+import { Outlet } from "react-router-dom";
 
 type Props = {};
 
 function InnerContent({}: Props) {
-  return <div>InnerContent</div>;
+  return (
+    <div>
+      <Outlet />
+    </div>
+  );
 }
 
 export default InnerContent;

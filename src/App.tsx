@@ -1,12 +1,9 @@
-import React from "react";
-import SideBar from "./components/SideBar";
-import InnerContent from "./components/InnerContent";
+import MainRoutes from "./Routes";
 
 function App() {
   return (
     <div className="App">
-      <SideBar />
-      <InnerContent />
+      <MainRoutes />
     </div>
   );
 }
