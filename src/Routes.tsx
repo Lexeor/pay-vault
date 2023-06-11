@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 
 import InnerContent from "./components/InnerContent";
 import Dashboard from "./components/Dashboard";
@@ -12,6 +12,7 @@ function MainRoutes({}: Props) {
     <div>
       <Routes>
         <Route path="/" element={<InnerContent />}>
+          <Route path="/" element={<Navigate replace to="login" />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/login" element={<Login />} />
         </Route>
