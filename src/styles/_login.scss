@@ -1,0 +1,17 @@
+.login-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 80%;
+  border: 0;
+  padding: 1em;
+}
+
+// Mobile view
+@media screen and (min-width: 600px) {
+  .login-panel {
+    width: 300px;
+    border-radius: 12px;
+    background-color: $colorPrimary;
+  }
+}
