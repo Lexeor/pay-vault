@@ -37,6 +37,21 @@ body {
   }
 }
 
+.content {
+  padding: 1em;
+}
+
+// Typographics
+h1 {
+  font-size: 1.5em;
+  margin-top: 0;
+}
+h4 {
+  color: $color-separator;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
 @import "./login";
 
 // Primitives

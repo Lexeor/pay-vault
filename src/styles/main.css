@@ -32,10 +32,25 @@ body {
   gap: 1em;
 }
 
+.content {
+  padding: 1em;
+}
+
+h1 {
+  font-size: 1.5em;
+  margin-top: 0;
+}
+
+h4 {
+  color: #c4c4c4;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
 .login-panel {
   display: flex;
   flex-direction: column;
-  gap: 2em;
+  gap: 1em;
   width: 80%;
   border: 0;
   padding: 1em;
@@ -46,14 +61,33 @@ body {
   padding: 10px;
 }
 .login-panel label {
-  margin-bottom: -1.6em;
+  margin-bottom: -0.6em;
+  font-size: 0.8em;
+}
+
+.login-signup-separator {
+  border-top: 1px solid #cbd2d6;
+  position: relative;
+  margin-top: 8.72%;
+  margin-bottom: 4.895%;
+  height: 15px;
+  text-align: center;
+  font-size: 83.34%;
+}
+.login-signup-separator .text-in-separator {
+  background-color: #fff;
+  padding: 0 0.5em;
+  position: relative;
+  color: #6c7378;
+  top: -0.7em;
 }
 
 @media screen and (min-width: 600px) {
   .login-panel {
     width: 300px;
     border-radius: 12px;
-    background-color: #a5ce8a;
+    border: 1px solid #c4c4c4;
+    padding: 2em;
   }
 }
 .btn-primary,
