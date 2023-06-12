@@ -62,7 +62,7 @@ function Login({}: Props) {
         <Form>
           <div className="login-panel">
             <h1>Login to continue</h1>
-            <div className="form-field">
+            <div className="form-group">
               <label htmlFor="label-name">Username</label>
               <Field name="username" type="text" className="form-control" />
               <ErrorMessage
@@ -71,7 +71,7 @@ function Login({}: Props) {
                 className="alert alert-danger"
               />
             </div>
-            <div className="form-field">
+            <div className="form-group">
               <label htmlFor="label-password">Password</label>
               <Field name="password" type="password" className="form-control" />
               <ErrorMessage
@@ -80,10 +80,11 @@ function Login({}: Props) {
                 className="alert alert-danger"
               />
             </div>
+            <br />
             <button type="submit" className="btn-primary">
               Login
             </button>
-            <div className="login-signup-separator ">
+            <div className="login-signup-separator">
               <span className="text-in-separator">or</span>
             </div>
             <button type="button" className="btn-secondary">
@@ -91,6 +92,13 @@ function Login({}: Props) {
               <span>Continue with Google</span>
             </button>
           </div>
+          {message && (
+            <div className="form-group">
+              <div className="alert alert-danger" role="alert">
+                {message}
+              </div>
+            </div>
+          )}
         </Form>
       </Formik>
     </div>
