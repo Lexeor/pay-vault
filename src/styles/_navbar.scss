@@ -1,0 +1,12 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1em;
+  border-bottom: 1px solid $color-separator;
+  font-size: 1.2em;
+
+  i {
+    font-size: 1.5rem;
+  }
+}
