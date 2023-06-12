@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:8080/api/auth/";
+const API_URL = "https://5266-31-206-101-249.ngrok-free.app/auth/jwt/";
 
 export const register = (username: string, email: string, password: string) => {
   return axios.post(API_URL + "signup", {
@@ -12,12 +12,13 @@ export const register = (username: string, email: string, password: string) => {
 
 export const login = (username: string, password: string) => {
   return axios
-    .post(API_URL + "signin", {
+    .post(API_URL + "create/", {
       username,
       password,
     })
     .then((response) => {
-      if (response.data.accessToken) {
+      console.log(response);
+      if (response.data.access) {
         localStorage.setItem("user", JSON.stringify(response.data));
       }
 

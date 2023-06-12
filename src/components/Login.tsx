@@ -36,7 +36,7 @@ function Login({}: Props) {
     login(username, password).then(
       () => {
         navigate("/dashboard");
-        window.location.reload();
+        //window.location.reload();
       },
       (error) => {
         const resMessage =
