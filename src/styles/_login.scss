@@ -1,10 +1,18 @@
+form {
+  width: 80%;
+}
+
 .login-panel {
   display: flex;
   flex-direction: column;
   gap: 1em;
-  width: 80%;
   border: 0;
   padding: 1em;
+
+  h1 {
+    margin: 0 auto;
+    margin-bottom: 1em;
+  }
 
   input {
     border: 1px solid $color-separator;
@@ -38,8 +46,11 @@
 
 // Desktop view
 @media screen and (min-width: 600px) {
+  form {
+    width: 350px;
+  }
+
   .login-panel {
-    width: 300px;
     border-radius: 12px;
     border: 1px solid $color-separator;
     padding: 2em;
