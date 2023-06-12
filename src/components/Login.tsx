@@ -62,20 +62,24 @@ function Login({}: Props) {
         <Form>
           <div className="login-panel">
             <h1>Login to continue</h1>
-            <label htmlFor="label-name">Username</label>
-            <Field name="username" type="text" className="form-control" />
-            <ErrorMessage
-              name="username"
-              component="div"
-              className="alert alert-danger"
-            />
-            <label htmlFor="label-password">Password</label>
-            <Field name="password" type="password" className="form-control" />
-            <ErrorMessage
-              name="password"
-              component="div"
-              className="alert alert-danger"
-            />
+            <div className="form-field">
+              <label htmlFor="label-name">Username</label>
+              <Field name="username" type="text" className="form-control" />
+              <ErrorMessage
+                name="username"
+                component="div"
+                className="alert alert-danger"
+              />
+            </div>
+            <div className="form-field">
+              <label htmlFor="label-password">Password</label>
+              <Field name="password" type="password" className="form-control" />
+              <ErrorMessage
+                name="password"
+                component="div"
+                className="alert alert-danger"
+              />
+            </div>
             <button type="submit" className="btn-primary">
               Login
             </button>
@@ -83,7 +87,8 @@ function Login({}: Props) {
               <span className="text-in-separator">or</span>
             </div>
             <button type="button" className="btn-secondary">
-              Continue with Google
+              <img src={`icons/google.svg`} alt="icon" />
+              <span>Continue with Google</span>
             </button>
           </div>
         </Form>

@@ -51,6 +51,21 @@ form {
   width: 80%;
 }
 
+.form-field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.form-field .alert {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: red;
+}
+
 .login-panel {
   display: flex;
   flex-direction: column;
@@ -68,7 +83,7 @@ form {
   padding: 10px;
 }
 .login-panel label {
-  margin-bottom: -0.8em;
+  margin-bottom: 0.4em;
   font-size: 0.8em;
   text-transform: uppercase;
   font-weight: 500;
@@ -165,6 +180,14 @@ form {
 }
 
 .btn-secondary {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
   border: 1px solid #c4c4c4;
   background-color: white;
+}
+.btn-secondary img {
+  width: 1.5em;
 }/*# sourceMappingURL=main.css.map */
