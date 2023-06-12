@@ -1,0 +1,34 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: 1px solid $color-separator;
+  border-radius: 6px;
+  padding: 1em;
+  transition: all 1s ease-in-out;
+}
+
+.card-header {
+  flex-grow: 1;
+
+  p {
+    margin: 0;
+  }
+}
+
+.card-body {
+  display: flex;
+  flex-direction: row;
+
+  .card-icon {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .icon {
+    font-size: 2em;
+  }
+}
