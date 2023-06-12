@@ -68,6 +68,14 @@ h4 {
   border: 1px solid $color-action;
   background-color: $color-action;
   color: whitesmoke;
+
+  &:hover {
+    background-color: $color-action-light;
+  }
+
+  &:focus {
+    background-color: $color-action-dark;
+  }
 }
 
 .btn-secondary {

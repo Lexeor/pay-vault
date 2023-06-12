@@ -68,8 +68,10 @@ form {
   padding: 10px;
 }
 .login-panel label {
-  margin-bottom: -0.6em;
+  margin-bottom: -0.8em;
   font-size: 0.8em;
+  text-transform: uppercase;
+  font-weight: 500;
 }
 
 .login-signup-separator {
@@ -154,6 +156,12 @@ form {
   border: 1px solid #2f69fe;
   background-color: #2f69fe;
   color: whitesmoke;
+}
+.btn-primary:hover {
+  background-color: #4479ff;
+}
+.btn-primary:focus {
+  background-color: #285ad8;
 }
 
 .btn-secondary {
