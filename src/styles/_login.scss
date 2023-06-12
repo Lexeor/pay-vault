@@ -1,17 +1,27 @@
 .login-panel {
   display: flex;
   flex-direction: column;
-  gap: 1em;
+  gap: 2em;
   width: 80%;
   border: 0;
   padding: 1em;
+
+  input {
+    border: 1px solid $color-separator;
+    border-radius: 20px;
+    padding: 10px;
+  }
+
+  label {
+    margin-bottom: -1.6em;
+  }
 }
 
-// Mobile view
+// Desktop view
 @media screen and (min-width: 600px) {
   .login-panel {
     width: 300px;
     border-radius: 12px;
-    background-color: $colorPrimary;
+    background-color: $color-primary;
   }
 }

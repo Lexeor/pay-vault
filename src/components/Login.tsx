@@ -7,11 +7,13 @@ function Login({}: Props) {
     <div className="container login">
       <h1>Login to continue</h1>
       <div className="login-panel">
-        <input name="login"></input>
-        <input name="password"></input>
-        <button>Login</button>
+        <label htmlFor="label-name">Username</label>
+        <input type="text" name="login" id="label-name"></input>
+        <label htmlFor="label-password">Password</label>
+        <input type="password" name="password" id="label-password"></input>
+        <button className="btn-primary">Login</button>
         <hr />
-        <button>Login with Google</button>
+        <button className="btn-secondary">Continue with Google</button>
       </div>
     </div>
   );

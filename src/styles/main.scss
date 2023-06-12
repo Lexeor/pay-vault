@@ -14,6 +14,7 @@ html,
 body {
   margin: 0;
   padding: 0;
+  font-family: "Inter", sans-serif;
 }
 
 .App {
@@ -37,3 +38,22 @@ body {
 }
 
 @import "./login";
+
+// Primitives
+
+.btn-primary,
+.btn-secondary {
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.btn-primary {
+  border: 1px solid $color-action;
+  background-color: $color-action;
+  color: whitesmoke;
+}
+
+.btn-secondary {
+  border: 1px solid $color-separator;
+  background-color: white;
+}

@@ -10,6 +10,7 @@ html,
 body {
   margin: 0;
   padding: 0;
+  font-family: "Inter", sans-serif;
 }
 
 .App {
@@ -34,10 +35,18 @@ body {
 .login-panel {
   display: flex;
   flex-direction: column;
-  gap: 1em;
+  gap: 2em;
   width: 80%;
   border: 0;
   padding: 1em;
+}
+.login-panel input {
+  border: 1px solid #c4c4c4;
+  border-radius: 20px;
+  padding: 10px;
+}
+.login-panel label {
+  margin-bottom: -1.6em;
 }
 
 @media screen and (min-width: 600px) {
@@ -46,4 +55,20 @@ body {
     border-radius: 12px;
     background-color: #a5ce8a;
   }
+}
+.btn-primary,
+.btn-secondary {
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.btn-primary {
+  border: 1px solid #2f69fe;
+  background-color: #2f69fe;
+  color: whitesmoke;
+}
+
+.btn-secondary {
+  border: 1px solid #c4c4c4;
+  background-color: white;
 }/*# sourceMappingURL=main.css.map */
