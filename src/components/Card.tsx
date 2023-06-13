@@ -18,9 +18,9 @@ const Card = ({ type, provider, cost, currency, isPayed }: CardProps) => {
 
   const btnClass = !isPayed ? "card-btn-pay" : "card-btn-pay payed";
   const btnIcon = !isPayed ? (
-    <i className="ri-check-line"></i>
-  ) : (
     <i className="ri-money-dollar-circle-line"></i>
+  ) : (
+    <i className="ri-check-line"></i>
   );
 
   return (
