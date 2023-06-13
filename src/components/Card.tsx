@@ -9,6 +9,16 @@ type CardProps = {
   payFunc?: () => void;
 };
 
+const icons: { [name: string]: string } = {
+  Internet: "ri-wifi-line",
+  TV: "ri-tv-line",
+  Mobile: "ri-smartphone-line",
+  Electricity: "ri-flashlight-line",
+  Rent: "ri-home-3-line",
+  Water: "ri-drop-line",
+  Gas: "ri-fire-line",
+};
+
 const Card = ({ type, provider, cost, currency, isPayed }: CardProps) => {
   const [isOpened, setIsOpened] = useState(false);
 
@@ -27,7 +37,7 @@ const Card = ({ type, provider, cost, currency, isPayed }: CardProps) => {
     <div className="card" onClick={handleOpen}>
       <div className="card-body">
         <div className="card-icon">
-          <i className="ri-flashlight-line icon"></i>
+          <i className={`${icons[type]} icon`}></i>
         </div>
         <div className="card-header">
           <span className="card-service-text">{type}</span>
