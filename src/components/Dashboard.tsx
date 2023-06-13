@@ -8,7 +8,13 @@ function Dashboard({}: Props) {
     <div className="content">
       <h1>Dashboard</h1>
       <h4>June 2023</h4>
-      <Card />
+      <Card
+        type={"Internet"}
+        provider={"Baktelecom"}
+        cost={21}
+        isPayed={true}
+        currency={"₼"}
+      />
     </div>
   );
 }

@@ -1,13 +1,27 @@
 import { useState } from "react";
 
-type CardProps = {};
+type CardProps = {
+  type: string;
+  provider: string;
+  cost: number;
+  currency: string;
+  isPayed: boolean;
+  payFunc?: () => void;
+};
 
-const Card = (props: CardProps) => {
+const Card = ({ type, provider, cost, currency, isPayed }: CardProps) => {
   const [isOpened, setIsOpened] = useState(false);
 
   const handleOpen = () => {
     setIsOpened((prev) => !prev);
   };
+
+  const btnClass = !isPayed ? "card-btn-pay" : "card-btn-pay payed";
+  const btnIcon = !isPayed ? (
+    <i className="ri-check-line"></i>
+  ) : (
+    <i className="ri-money-dollar-circle-line"></i>
+  );
 
   return (
     <div className="card" onClick={handleOpen}>
@@ -16,10 +30,14 @@ const Card = (props: CardProps) => {
           <i className="ri-flashlight-line icon"></i>
         </div>
         <div className="card-header">
-          <p>Service Name</p>
-          <p>Service Provider</p>
+          <span className="card-service-text">{type}</span>
+          <span className="card-provider-text">{provider}</span>
         </div>
-        <button>$</button>
+        <div className="card-cost">
+          {currency}
+          {cost}
+        </div>
+        <button className={btnClass}>{btnIcon}</button>
       </div>
       {isOpened && <div className="card-details">Details</div>}
     </div>
