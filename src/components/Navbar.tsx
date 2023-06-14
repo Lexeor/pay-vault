@@ -4,12 +4,15 @@ import { MenuContext } from "../contexts/MenuContext";
 type Props = {};
 
 const Navbar = (props: Props) => {
-  const { toggleMenu } = useContext(MenuContext);
+  const { isVisible, toggleMenu } = useContext(MenuContext);
 
   return (
     <div className="navbar">
-      <span>Navbar</span>
-      <i className="ri-menu-line" onClick={toggleMenu}></i>
+      <span>{isVisible ? "Menu" : "Pay Vault"}</span>
+      <i
+        className={isVisible ? "ri-close-line" : "ri-menu-line"}
+        onClick={toggleMenu}
+      ></i>
     </div>
   );
 };

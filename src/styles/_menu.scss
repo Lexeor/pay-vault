@@ -1,15 +1,36 @@
 .menu-container {
   position: fixed;
   left: 0;
-  top: 0;
-  transform: translate3d(-100vw, 0, 0);
+  top: 64px;
+  transform: translate3d(100vw, 0, 0);
   background-color: $color-background;
+  transition: transform 0.5s;
 
   width: 100vw;
-  height: 100vh;
+  height: calc(100vh - 64px);
 
   &.active {
     transform: translate3d(0, 0, 0);
+  }
+
+  ul {
+    list-style-type: none;
+    padding-left: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    height: 100%;
+
+    li {
+      text-transform: uppercase;
+      font-size: 1.5em;
+
+      &.li-logout {
+        margin-top: auto;
+        margin-bottom: 2em;
+        color: red;
+      }
+    }
   }
 }
 

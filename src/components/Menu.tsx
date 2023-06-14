@@ -4,20 +4,18 @@ import { MenuContext } from "../contexts/MenuContext";
 type Props = {};
 
 const Menu = () => {
-  const { isVisible, toggleMenu } = useContext(MenuContext);
+  const { isVisible } = useContext(MenuContext);
 
   const menuClass = `menu-container ${isVisible ? " active" : ""}`;
 
   return (
     <div className={menuClass}>
       <ul>
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
+        <li>Statistics</li>
+        <li>New element</li>
+        <li>Third option</li>
+        <li className="li-logout">Logout</li>
       </ul>
-      <div className="close-btn" onClick={toggleMenu}>
-        <i className="ri-close-line"></i>
-      </div>
     </div>
   );
 };
