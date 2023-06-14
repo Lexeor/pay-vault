@@ -3,9 +3,10 @@
   flex-direction: row;
   justify-content: space-between;
   padding: 1em;
-  border-bottom: 1px solid $color-separator;
+  border: 0;
   font-size: 1.2em;
   height: 64px;
+  box-shadow: 0 0 15px 1px $color-black-10;
 
   i {
     font-size: 1.5rem;
