@@ -47,7 +47,9 @@ const Card = ({ type, provider, cost, currency, isPayed }: CardProps) => {
           {currency}
           {cost}
         </div>
-        <button className={btnClass}>{btnIcon}</button>
+        <button className={btnClass}>
+          <img src={`icons/money.svg`} alt="icon" />
+        </button>
       </div>
       {isOpened && <div className="card-details">Details</div>}
     </div>

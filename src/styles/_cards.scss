@@ -37,7 +37,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba($color-light-gray, 0.5);
+    background-color: $color-light-gray;
     border: 0;
     border-radius: 12px;
   }
@@ -60,12 +60,16 @@
   justify-content: center;
   align-items: center;
   border: 0;
-  background-color: $color-primary;
+  background-color: $color-light-gray;
   border-radius: 12px;
   width: 48px;
   height: 48px;
   color: white;
   font-size: 2em;
+
+  img {
+    width: 80%;
+  }
 
   &.payed {
     background-color: white;
