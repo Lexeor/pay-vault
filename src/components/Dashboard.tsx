@@ -1,5 +1,6 @@
-import React from "react";
+import { useEffect } from "react";
 import Card from "./Card";
+import { getUserInfo } from "../services/user.service";
 
 import data from "../data/data";
 
@@ -18,6 +19,12 @@ function Dashboard({}: Props) {
       />
     );
   });
+
+  useEffect(() => {
+    getUserInfo().then((response) => {
+      console.log(response.data);
+    });
+  }, []);
 
   return (
     <div className="content">

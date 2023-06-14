@@ -1,9 +1,8 @@
 import axios from "axios";
-
-const API_URL = "https://5266-31-206-101-249.ngrok-free.app/auth/jwt/";
+import { AUTH_URL } from "./urls";
 
 export const register = (username: string, email: string, password: string) => {
-  return axios.post(API_URL + "signup", {
+  return axios.post(AUTH_URL + "signup", {
     username,
     email,
     password,
@@ -12,7 +11,7 @@ export const register = (username: string, email: string, password: string) => {
 
 export const login = (username: string, password: string) => {
   return axios
-    .post(API_URL + "create/", {
+    .post(AUTH_URL + "create/", {
       username,
       password,
     })

@@ -67,6 +67,10 @@ form {
   font-weight: 500;
   color: red;
 }
+.form-group .alert.error {
+  position: relative;
+  margin: 0 auto;
+}
 
 .login-panel {
   display: flex;

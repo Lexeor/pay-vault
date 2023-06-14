@@ -5,9 +5,7 @@ import * as Yup from "yup";
 
 import { login } from "../services/auth.service";
 
-type Props = {};
-
-function Login({}: Props) {
+function Login() {
   let navigate: NavigateFunction = useNavigate();
 
   const [loading, setLoading] = useState<boolean>(false);
@@ -94,7 +92,7 @@ function Login({}: Props) {
           </div>
           {message && (
             <div className="form-group">
-              <div className="alert alert-danger" role="alert">
+              <div className="alert alert-danger error" role="alert">
                 {message}
               </div>
             </div>
