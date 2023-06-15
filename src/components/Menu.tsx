@@ -1,6 +1,8 @@
 import { useContext } from "react";
 import { MenuContext } from "../contexts/MenuContext";
 
+import { logout } from "../services/auth.service";
+
 type Props = {};
 
 const Menu = () => {
@@ -14,7 +16,9 @@ const Menu = () => {
         <li>Statistics</li>
         <li>New element</li>
         <li>Third option</li>
-        <li className="li-logout">Logout</li>
+        <li className="li-logout" onClick={logout}>
+          Logout
+        </li>
       </ul>
     </div>
   );

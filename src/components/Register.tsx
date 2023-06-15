@@ -15,18 +15,21 @@ const Register = (props: Props) => {
 
   const initialValues: {
     username: string;
-    password: string;
     email: string;
+    password: string;
+    confirmPassword: string;
   } = {
     username: "",
-    password: "",
     email: "",
+    password: "",
+    confirmPassword: "",
   };
 
   const validationSchema = Yup.object().shape({
     username: Yup.string().required("This field is required!"),
-    password: Yup.string().required("This field is required!"),
     email: Yup.string().required("This field is required!"),
+    password: Yup.string().required("This field is required!"),
+    confirmPassword: Yup.string().required("This field is required!"),
   });
 
   const handleRegister = (formValue: {
@@ -90,6 +93,19 @@ const Register = (props: Props) => {
               <Field name="password" type="password" className="form-control" />
               <ErrorMessage
                 name="password"
+                component="div"
+                className="alert alert-danger"
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="label-confirm-password">Confirm password</label>
+              <Field
+                name="confirm-password"
+                type="password"
+                className="form-control"
+              />
+              <ErrorMessage
+                name="confirm-password"
                 component="div"
                 className="alert alert-danger"
               />
