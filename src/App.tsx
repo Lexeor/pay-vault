@@ -10,7 +10,8 @@ function App() {
   return (
     <div className="App">
       <MenuContextProvider>
-        {location.pathname !== "/login" && <Navbar />}
+        {location.pathname !== "/login" &&
+          location.pathname !== "/register" && <Navbar />}
         <MainRoutes />
         <Menu />
       </MenuContextProvider>

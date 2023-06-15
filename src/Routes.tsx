@@ -4,6 +4,7 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import InnerContent from "./components/InnerContent";
 import Dashboard from "./components/Dashboard";
 import Login from "./components/Login";
+import Register from "./components/Register";
 
 type Props = {};
 
@@ -15,6 +16,7 @@ function MainRoutes({}: Props) {
           <Route path="/" element={<Navigate replace to="dashboard" />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
         </Route>
       </Routes>
     </div>

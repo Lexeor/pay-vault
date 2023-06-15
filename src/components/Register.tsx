@@ -1,11 +1,13 @@
 import { useState } from "react";
-import { NavigateFunction, useNavigate, Link } from "react-router-dom";
+import { NavigateFunction, useNavigate } from "react-router-dom";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
 
-import { login } from "../services/auth.service";
+import { register } from "../services/auth.service";
 
-function Login() {
+type Props = {};
+
+const Register = (props: Props) => {
   let navigate: NavigateFunction = useNavigate();
 
   const [loading, setLoading] = useState<boolean>(false);
@@ -14,26 +16,32 @@ function Login() {
   const initialValues: {
     username: string;
     password: string;
+    email: string;
   } = {
     username: "",
     password: "",
+    email: "",
   };
 
   const validationSchema = Yup.object().shape({
     username: Yup.string().required("This field is required!"),
     password: Yup.string().required("This field is required!"),
+    email: Yup.string().required("This field is required!"),
   });
 
-  const handleLogin = (formValue: { username: string; password: string }) => {
-    const { username, password } = formValue;
+  const handleRegister = (formValue: {
+    username: string;
+    email: string;
+    password: string;
+  }) => {
+    const { username, email, password } = formValue;
 
     setMessage("");
     setLoading(true);
 
-    login(username, password).then(
+    register(username, password, email).then(
       () => {
         navigate("/dashboard");
-        //window.location.reload();
       },
       (error) => {
         const resMessage =
@@ -54,16 +62,25 @@ function Login() {
       <Formik
         initialValues={initialValues}
         validationSchema={validationSchema}
-        onSubmit={handleLogin}
+        onSubmit={handleRegister}
       >
         <Form>
           <div className="login-panel">
-            <h1>Login to continue</h1>
+            <h1>Registration Form</h1>
             <div className="form-group">
               <label htmlFor="label-name">Username</label>
               <Field name="username" type="text" className="form-control" />
               <ErrorMessage
                 name="username"
+                component="div"
+                className="alert alert-danger"
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="label-email">Email</label>
+              <Field name="email" type="text" className="form-control" />
+              <ErrorMessage
+                name="email"
                 component="div"
                 className="alert alert-danger"
               />
@@ -77,18 +94,9 @@ function Login() {
                 className="alert alert-danger"
               />
             </div>
-            <span>
-              Don't have an account? <Link to="/register">Signup</Link>
-            </span>
+            <br />
             <button type="submit" className="btn-primary">
-              Login
-            </button>
-            <div className="login-signup-separator">
-              <span className="text-in-separator">or</span>
-            </div>
-            <button type="button" className="btn-secondary">
-              <img src={`icons/google.svg`} alt="icon" />
-              Continue with Google
+              Register
             </button>
           </div>
           {message && (
@@ -102,6 +110,6 @@ function Login() {
       </Formik>
     </div>
   );
-}
+};
 
-export default Login;
+export default Register;
