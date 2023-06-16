@@ -1,11 +1,7 @@
 import { useState } from "react";
+import { Service } from "../types/service.type";
 
-type CardProps = {
-  type: string;
-  provider: string;
-  cost: number;
-  currency: string;
-  isPayed: boolean;
+type CardProps = Service & {
   payFunc?: () => void;
 };
 
