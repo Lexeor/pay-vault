@@ -16,10 +16,11 @@ const Menu = () => {
         <li>Statistics</li>
         <li>New element</li>
         <li>Third option</li>
-        <li className="li-logout" onClick={logout}>
-          Logout
-        </li>
       </ul>
+      <button className="user-btn" onClick={logout}>
+        Logout
+        <i className="ri-arrow-down-s-fill"></i>
+      </button>
     </div>
   );
 };
