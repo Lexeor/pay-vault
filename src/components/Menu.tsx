@@ -1,12 +1,14 @@
 import { useContext } from "react";
 import { MenuContext } from "../contexts/MenuContext";
 
-import { logout } from "../services/auth.service";
+import { logout, getCurrentUser } from "../services/auth.service";
 
 type Props = {};
 
 const Menu = () => {
   const { isVisible } = useContext(MenuContext);
+
+  console.log(getCurrentUser());
 
   const menuClass = `menu-container ${isVisible ? " active" : ""}`;
 
@@ -18,7 +20,7 @@ const Menu = () => {
         <li>Third option</li>
       </ul>
       <button className="user-btn" onClick={logout}>
-        Logout
+        User Name
         <i className="ri-arrow-down-s-fill"></i>
       </button>
     </div>
