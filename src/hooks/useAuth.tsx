@@ -3,7 +3,11 @@ import { useState, useEffect } from "react";
 type Props = {};
 
 export const useAuth = () => {
-  const [user, setUser] = useState(false);
+  const user = localStorage.getItem("user");
 
-  return user;
+  if (user) {
+    return true;
+  } else {
+    return false;
+  }
 };
