@@ -1,17 +1,24 @@
 import axios from "axios";
 import { AUTH_URL } from "./urls";
 
-export const register = (username: string, email: string, password: string) => {
-  return axios.post(AUTH_URL + "signup", {
-    username,
-    email,
-    password,
-  });
+export const register = (email: string, password: string, username: string) => {
+  return axios
+    .post(AUTH_URL + "users/", {
+      email,
+      username,
+      password,
+    })
+    .then((response) => {
+      console.log(response);
+      if (response) {
+        console.log(response.data);
+      }
+    });
 };
 
 export const login = (username: string, password: string) => {
   return axios
-    .post(AUTH_URL + "create/", {
+    .post(AUTH_URL + "jwt/create/", {
       username,
       password,
     })

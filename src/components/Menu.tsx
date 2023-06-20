@@ -1,14 +1,12 @@
 import { useContext } from "react";
 import { MenuContext } from "../contexts/MenuContext";
 
-import { logout, getCurrentUser } from "../services/auth.service";
+import { logout } from "../services/auth.service";
 
 type Props = {};
 
 const Menu = () => {
   const { isVisible } = useContext(MenuContext);
-
-  console.log(getCurrentUser());
 
   const menuClass = `menu-container ${isVisible ? " active" : ""}`;
 

@@ -14,22 +14,19 @@ const Register = (props: Props) => {
   const [message, setMessage] = useState<string>("");
 
   const initialValues: {
-    username: string;
     email: string;
     password: string;
-    confirmPassword: string;
+    username: string;
   } = {
-    username: "",
     email: "",
     password: "",
-    confirmPassword: "",
+    username: "",
   };
 
   const validationSchema = Yup.object().shape({
-    username: Yup.string().required("This field is required!"),
     email: Yup.string().required("This field is required!"),
     password: Yup.string().required("This field is required!"),
-    confirmPassword: Yup.string().required("This field is required!"),
+    username: Yup.string().required("This field is required!"),
   });
 
   const handleRegister = (formValue: {
@@ -37,12 +34,12 @@ const Register = (props: Props) => {
     email: string;
     password: string;
   }) => {
-    const { username, email, password } = formValue;
+    const { email, password, username } = formValue;
 
     setMessage("");
     setLoading(true);
 
-    register(username, password, email).then(
+    register(email, password, username).then(
       () => {
         navigate("/dashboard");
       },
