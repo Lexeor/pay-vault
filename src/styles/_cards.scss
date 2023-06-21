@@ -60,13 +60,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 0;
+  border: 1px solid $color-action;
   background-color: $color-light-gray;
   border-radius: 12px;
   width: 48px;
   height: 48px;
   color: white;
   font-size: 2em;
+  opacity: 0.8;
+
+  &:hover {
+    opacity: 1;
+  }
 
   img {
     width: 80%;
