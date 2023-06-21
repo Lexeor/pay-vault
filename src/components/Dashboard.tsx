@@ -27,7 +27,12 @@ function Dashboard() {
 
   return (
     <div className="content">
-      <h1>Dashboard</h1>
+      <div className="top-row">
+        <h1>Dashboard</h1>
+        <button>
+          <i className="ri-add-line"></i>
+        </button>
+      </div>
       <h4>June 2023</h4>
       <div className="cards-wrapper">{renderCards}</div>
     </div>

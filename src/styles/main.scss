@@ -45,6 +45,35 @@ body {
 
 .content {
   padding: 1em;
+
+  .top-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 45px;
+      height: 45px;
+      border: 0;
+      border-radius: 8px;
+      background-color: $color-action;
+      color: white;
+      font-size: 1.4em;
+      font-weight: 600;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $color-action-light;
+      }
+
+      &:active {
+        background-color: $color-action-dark;
+      }
+    }
+  }
 }
 
 // Typographics
@@ -56,6 +85,7 @@ h4 {
   color: $color-separator;
   text-transform: uppercase;
   font-weight: 500;
+  margin-top: 0;
 }
 
 @import "./login";
