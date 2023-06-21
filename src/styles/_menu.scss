@@ -49,7 +49,11 @@
     letter-spacing: 1px;
 
     i {
-      font-size: 1.5em;
+      font-size: 1.3em;
+
+      &.rotated {
+        transform: rotate(180deg);
+      }
     }
   }
 }
@@ -60,4 +64,21 @@
   right: 0;
   padding: 1em;
   font-size: 1.5em;
+}
+
+.user-options {
+  display: block;
+
+  &.hidden {
+    display: none;
+  }
+
+  ul {
+    li {
+      text-transform: uppercase;
+      font-size: 1.1em;
+      font-weight: 500;
+      letter-spacing: 1px;
+    }
+  }
 }

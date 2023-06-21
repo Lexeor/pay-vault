@@ -309,7 +309,10 @@ form {
   letter-spacing: 1px;
 }
 .menu-container .user-btn i {
-  font-size: 1.5em;
+  font-size: 1.3em;
+}
+.menu-container .user-btn i.rotated {
+  transform: rotate(180deg);
 }
 
 .close-btn {
@@ -318,6 +321,19 @@ form {
   right: 0;
   padding: 1em;
   font-size: 1.5em;
+}
+
+.user-options {
+  display: block;
+}
+.user-options.hidden {
+  display: none;
+}
+.user-options ul li {
+  text-transform: uppercase;
+  font-size: 1.1em;
+  font-weight: 500;
+  letter-spacing: 1px;
 }
 
 .btn-primary,
